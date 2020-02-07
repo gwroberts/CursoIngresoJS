@@ -19,5 +19,7 @@ function mostrarAumento()
    
     monto = importeparseado * descuento;
 
+    document.getElementById ("resultado").value = monto;
     
+
 }
