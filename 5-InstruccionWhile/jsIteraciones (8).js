@@ -22,7 +22,7 @@ function mostrar()
 
 		}else{
 			negativo = negativo *numero;
-			contador = contador +1;
+			contador = contador +1;//aca esta para saber si alguna vez hay un numero negativo, si queda en cero nunca se ejecuto esta linea
 				
 		}
 		 respuesta = confirm ("desea continuar?");	
