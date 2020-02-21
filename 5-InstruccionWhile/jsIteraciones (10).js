@@ -11,6 +11,8 @@ function mostrar() {
 	var cantidadnegativos=0;
 	var cantidadpares =0;
 	var promediopositivos;
+	var promedionegativos;
+	var diferenciaentrepositivosynegativos;
 	while (respuesta) {															//do while cuaderno
 		numero = prompt("Ingrese numero");
 		numero = parseInt(numero);
@@ -27,7 +29,7 @@ function mostrar() {
 		} else {
 			cantidadceros = cantidadceros + 1;
 			if (numero % 2 == 0){
-				contidadpares =cantidadpares +1;
+				cantidadpares =cantidadpares +1;
 			}
 			
 		}	if (cantidadpositivos !=0){
@@ -43,7 +45,7 @@ function mostrar() {
 	}//llave de cierre del while
 
 	document.write ("1 La suma de los negativos es "+sumanegativos);
-	cocument.write ("2 La suma de los positivos es  "+sumapositivos);
+	document.write ("2 La suma de los positivos es  "+sumapositivos);
 	document.write ("3 La cantidad de numeros positivos es "+cantidadpositivos);
 	document.write ("4 La cantidad de negativos es "+cantidadnegativos);
 	document.write ("5 La cantidad de ceros es	"+cantidadceros);
@@ -51,6 +53,6 @@ function mostrar() {
 	document.write ("7 El promedio de positivos es "+promediopositivos);
 	document.write ("8 El promedio de negativos es"+promedionegativos );
 	document.write ("9La diferencia entre positivos y negativos es "+diferenciaentrepositivosynegativos);
-	alert ("la cantidad de ceros ingresados es"  + cantidadceros );
+	
 
 }//FIN DE LA FUNCIÓN
