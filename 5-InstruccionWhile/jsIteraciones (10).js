@@ -52,13 +52,13 @@ function mostrar() {
 	promedioNegativos=sumaNegativo/contadorNegativo;
 	diferenciaPN=sumaPositivos+sumaNegativo;
 
-document.write ("La suma de los numeros negativos ingresados es: <br> "+sumaNegativo );
+document.write ("La suma de los numeros negativos ingresados es: <br> "+sumaNegativo);
 document.write ("La suma de los numeros positivos ingresados es:<br> "+sumaPositivos);
 document.write ("La cantidad de numeros positivos ingresados es: <br>"+contadorPositivo);
 document.write ("La cantidad de numeros negativos ingresados es:<br> "+contadorNegativo);
 document.write ("La cantidad de elementos neutros ingresados es: <br>"+contadorCeros);
 document.write ("La cantidad de numeros pares ingresados es: <br>"+contadorPares);
-document.write ("El promedio de los numeros positivos ingresados es: <br>"+promedioPositovos);
+document.write ("El promedio de los numeros positivos ingresados es: <br>"+promedioPositivos);
 document.write ("El promedio de los numeros negativos ingresados es: <br>"+promedioNegativos);
 document.write ("La diferencia entre los numeros positivos y negativos ingresados es: <br>"+diferenciaPN);
 }//FIN DE LA FUNCIÓN
