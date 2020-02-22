@@ -1,58 +1,64 @@
 function mostrar() {
 
-	var contador = 0;
+	//1 inicializo el contador para empezar el while
 	//declarar contadores y variables 
-	var numero;
-	var respuesta = "si";
-	var sumanegativos;
-	var sumapositivos;
-	var cantidadpositivos=0;
-	var cantidadceros=0;
-	var cantidadnegativos=0;
-	var cantidadpares =0;
-	var promediopositivos;
-	var promedionegativos;
-	var diferenciaentrepositivosynegativos;
-	while (respuesta) {															//do while cuaderno
-		numero = prompt("Ingrese numero");
-		numero = parseInt(numero);
-		while (isNaN(numero)) {
-			numero = parseInt(numero);
-		}	//termino la validacion de datos.
-		if (numero > 0) {
-			sumapositivos = sumapositivos + numero;
-			cantidadpositivos = cantidadpositivos +1;
-			
-		} else if (numero < 0) {
-			sumanegativos = sumanegativos + numero;
-			cantidadnegativos = cantidadnegativos +1;
-		} else {
-			cantidadceros = cantidadceros + 1;
-			if (numero % 2 == 0){
-				cantidadpares =cantidadpares +1;
-			}
-			
-		}	if (cantidadpositivos !=0){
-			promediopositivos=sumapositivos/cantidadpositivos;
-		}
-
-			if (cantidadnegativos !=0){
-				promedionegativos=sumanegativos/cantidadpositivos;
-			}
+	var respuesta;
+	var numeroIngresado;
+	var acumulador=0;
+	var contador=0;
+	var acumulador=0;
+	var sumaNegativo=0;
+	var sumaPositivos=0;
+	var contadorCeros=0;
+	var contadorNegativo=0;
+	var contadorPositivo=0;
+	var contadorPares=0;
+	var promedioPositivos;
+	var promedioNegativos;
+	var diferenciaPN;
+	respuesta="si";
+	while (respuesta == "si"){
+		contador=contador+1;
+		numeroIngresado = prompt ("ingresel el " +contador+ "º numero : ");
+		numeroIngresado=parseInt (numeroIngresado);
+		while (isNaN (numeroIngresado)){
+			numeroIngresado=prompt("error, ingrese un numero ");
+			numeroIngresado=parseInt (numeroIngresado);
+		} //termino la validacion de datos con el segundo while
 		
-			diferenciaentrepositivosynegativos=cantidadpositivos-cantidadnegativos;
-		respuesta = confirm("desea continuar?");
-	}//llave de cierre del while
-
-	document.write ("1 La suma de los negativos es "+sumanegativos);
-	document.write ("2 La suma de los positivos es  "+sumapositivos);
-	document.write ("3 La cantidad de numeros positivos es "+cantidadpositivos);
-	document.write ("4 La cantidad de negativos es "+cantidadnegativos);
-	document.write ("5 La cantidad de ceros es	"+cantidadceros);
-	document.write ("6 La cantidad de numeros pares es "+cantidadpares);
-	document.write ("7 El promedio de positivos es "+promediopositivos);
-	document.write ("8 El promedio de negativos es"+promedionegativos );
-	document.write ("9La diferencia entre positivos y negativos es "+diferenciaentrepositivosynegativos);
+			if (numeroIngresado<0){		//ingreso numeros negativos
+				sumaNegativo=sumaNegativo+numeroIngresado;//acumulo negativos
+				contadorNegativo=contadorNegativo+1;//cuento cantidad de negativos
+			} else if(numeroIngresado>0){	//ingreso numeros positivos
+				sumaPositivos=sumaPositivos+numeroIngresado;//acumulo numeros positivos
+				contadorPositivo=contadorPositivo+1;//cuento la cantidad de numeros positivos
+				} else{
+				contadorCeros=contadorCeros+1;//cuento la cantidad de ceros ingresados
+				  } 
+				  	if(numeroIngresado%2==0){//cuento la cantidad de numeros pares
+						contadorPares=contadorPares+1;
+						
+					}	
+					  
+		
+		
+		
+				  acumulador=acumulador+numeroIngresado;
+		
+			respuesta =prompt ("desea continuar?");
+	} 	
 	
+	promedioPositivos=sumaPositivos/contadorPositivo;
+	promedioNegativos=sumaNegativo/contadorNegativo;
+	diferenciaPN=sumaPositivos+sumaNegativo;
 
+document.write ("La suma de los numeros negativos ingresados es: <br> "+sumaNegativo );
+document.write ("La suma de los numeros positivos ingresados es:<br> "+sumaPositivos);
+document.write ("La cantidad de numeros positivos ingresados es: <br>"+contadorPositivo);
+document.write ("La cantidad de numeros negativos ingresados es:<br> "+contadorNegativo);
+document.write ("La cantidad de elementos neutros ingresados es: <br>"+contadorCeros);
+document.write ("La cantidad de numeros pares ingresados es: <br>"+contadorPares);
+document.write ("El promedio de los numeros positivos ingresados es: <br>"+promedioPositovos);
+document.write ("El promedio de los numeros negativos ingresados es: <br>"+promedioNegativos);
+document.write ("La diferencia entre los numeros positivos y negativos ingresados es: <br>"+diferenciaPN);
 }//FIN DE LA FUNCIÓN
