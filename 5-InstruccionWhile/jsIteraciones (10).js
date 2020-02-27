@@ -45,7 +45,7 @@ function mostrar() {
 		
 				  acumulador=acumulador+numeroIngresado;
 		
-			respuesta =prompt ("desea continuar?");
+			respuesta =confirm ("desea continuar?");
 	} 	
 	
 	promedioPositivos=sumaPositivos/contadorPositivo;
