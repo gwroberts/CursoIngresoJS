@@ -13,15 +13,20 @@ var contadorFrio=0;
 var promedioPeso;  
 var contador=0;
 var acumuladorPeso=0;   
-var pesoMax=0;
-var pesoMin=0;   
+var pesoMax;
+var pesoMin;   
     while (respuesta)
     {
         contador=contador+1;
-       marca=prompt("Ingrese la marca");
+       marca=prompt("Ingrese la marca");                        
+       while(marca=="")
+        {
+            marca=prompt("Error, ingrese una marca valida");
+        }
+       
        peso=prompt("ingrese el peso");
        peso=parseInt(peso);
-       while (isNaN(peso) && peso<=0 || peso>101)
+       while (isNaN(peso) && peso<=0 || peso>101)   //valido el peso con valores 1 a 100
        {
            peso=prompt("Error,ingrese el peso nuevamente");
            peso=parseInt(peso);
@@ -30,7 +35,7 @@ var pesoMin=0;
         }
                 temperatura=prompt("Ingrese temperatura");
                 temperatura=parseInt(temperatura);
-            while(isNaN(temperatura) && temperatura<-30 || temperatura>30)
+            while(isNaN(temperatura) && temperatura<-30 || temperatura>30)  //valido la temperatura -30/+30
            {
                 temperatura=prompt("Error,ingrese la temperatura nuevamente");
                 temperatura=parseInt(temperatura);
@@ -40,7 +45,7 @@ var pesoMin=0;
             } 
 
                 //punto A
-            if(temperatura%2==0)
+            if(temperatura % 2 == 0)
              { 
                 contadorTemperatura=contadorTemperatura+1;
              }
